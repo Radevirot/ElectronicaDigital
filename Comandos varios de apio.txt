@@ -1,0 +1,36 @@
+-------- INSTALACIÓN --------
+pip install -U apio
+apio install --all
+apio drivers --ftdi-enable #solo si se tiene la placa
+-----------------------------
+
+------ CREAR PROYECTO -------
+1. Crear carpeta nueva
+2. Abrir carpeta con vscode
+3. Crear archivo [nombre].v
+4. Programar el módulo
+5. Crear archivo [nombre]_tb.v
+-----------------------------
+
+
+-------- EJECUCIÓN ----------
+apio init -b edu-ciaa-fpga --top-module [nombre] # inicializar
+apio verify               #checkear sintaxis
+apio sim                  #simular con gtkwave
+apio build                #construir para impactar en placa
+apio upload               #impactar en placa
+-----------------------------
+
+------ GRAFICAR CÓDIGO ------
+apio raw yosys
+yosys> read_verilog [nombre archivo];
+yosys> show;
+
+- Instalar extensión de VSCode
+Graphviz Interactive Preview
+- Ir al archivo y presionar DOT en
+la esquina superior derecha
+
+yosys> prep -flatten    #expande el gráfico?
+yosys> show;
+-----------------------------

@@ -1,0 +1,27 @@
+digraph "ejemplo_02" {
+label="ejemplo_02";
+rankdir="LR";
+remincross=true;
+n6 [ shape=octagon, label="s", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="comp", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="b", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="a", color="black", fontcolor="black" ];
+c13 [ shape=record, label="{{<p10> A|<p11> B}|$4\n$add|{<p12> Y}}" ];
+v0 [ label="10" ];
+c14 [ shape=record, label="{{<p10> A|<p11> B}|$3\n$add|{<p12> Y}}" ];
+v1 [ label="10" ];
+c15 [ shape=record, label="{{<p10> A|<p11> B}|$2\n$gt|{<p12> Y}}" ];
+x3 [ shape=record, style=rounded, label="<s0> 3:0 - 3:0 " ];
+p2 [shape=box, style=rounded, label="PROC $1\nejemplo_02.v:8.1-15.4"];
+c13:p12:e -> p2:w [color="black", style="setlinewidth(3)", label=""];
+c14:p12:e -> x3:s0:w [color="black", style="setlinewidth(3)", label=""];
+c15:p12:e -> p2:w [color="black", label=""];
+p2:e -> n6:w [color="black", style="setlinewidth(3)", label=""];
+n7:e -> c15:p10:w [color="black", style="setlinewidth(3)", label=""];
+n8:e -> c13:p11:w [color="black", style="setlinewidth(3)", label=""];
+n9:e -> c13:p10:w [color="black", style="setlinewidth(3)", label=""];
+n9:e -> c14:p10:w [color="black", style="setlinewidth(3)", label=""];
+v0:e -> c14:p11:w [color="black", style="setlinewidth(3)", label=""];
+v1:e -> c15:p11:w [color="black", style="setlinewidth(3)", label=""];
+x3:e -> p2:w [color="black", style="setlinewidth(3)", label=""];
+}

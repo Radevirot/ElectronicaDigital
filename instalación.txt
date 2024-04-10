@@ -1,0 +1,3 @@
+- instalar python (con pip)
+- pip install apio
+- drivers de la fpga (introduction to fpga en el aula virtual)

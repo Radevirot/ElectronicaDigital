@@ -1,0 +1,26 @@
+digraph "ejemplo_1" {
+label="ejemplo_1";
+rankdir="LR";
+remincross=true;
+n5 [ shape=octagon, label="a", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="b", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="s", color="black", fontcolor="black" ];
+c10 [ shape=record, label="{{<p8> A}|$13\n$not|{<p9> Y}}" ];
+c12 [ shape=record, label="{{<p8> A|<p11> B}|$23\n$and|{<p9> Y}}" ];
+c13 [ shape=record, label="{{<p8> A|<p11> B}|$29\n$and|{<p9> Y}}" ];
+c17 [ shape=record, label="{{<p14> D|<p15> EN}|$35\n$dlatch|{<p16> Q}}" ];
+v0 [ label="1'0" ];
+v1 [ label="1'1" ];
+c19 [ shape=record, label="{{<p8> A|<p11> B|<p18> S}|$11\n$mux|{<p9> Y}}" ];
+c19:p9:e -> c17:p14:w [color="black", label=""];
+c10:p9:e -> c12:p11:w [color="black", label=""];
+c12:p9:e -> c13:p11:w [color="black", label=""];
+c13:p9:e -> c17:p15:w [color="black", label=""];
+n5:e -> c12:p8:w [color="black", label=""];
+n5:e -> c13:p8:w [color="black", label=""];
+n5:e -> c19:p18:w [color="black", label=""];
+n6:e -> c10:p8:w [color="black", label=""];
+c17:p16:e -> n7:w [color="black", label=""];
+v0:e -> c19:p8:w [color="black", label=""];
+v1:e -> c19:p11:w [color="black", label=""];
+}
