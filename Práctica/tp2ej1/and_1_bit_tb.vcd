@@ -1,5 +1,5 @@
 $date
-	Tue Apr 09 10:10:30 2024
+	Sat Apr 13 13:47:56 2024
 $end
 $version
 	Icarus Verilog
@@ -9,84 +9,99 @@ $timescale
 $end
 $scope module and_1_bit_tb $end
 $var wire 1 ! test_x $end
-$var reg 1 " clk $end
-$var reg 1 # test_a $end
-$var reg 1 $ test_b $end
+$var parameter 32 " DURATION $end
+$var reg 1 # clk $end
+$var reg 1 $ test_a $end
+$var reg 1 % test_b $end
 $scope module UUT_and_1_bit $end
-$var wire 1 # A $end
-$var wire 1 $ B $end
+$var wire 1 $ A $end
+$var wire 1 & A_neg $end
+$var wire 1 % B $end
+$var wire 1 ' B_neg $end
 $var wire 1 ! X $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1010 "
+$end
 #0
 $dumpvars
+x'
+x&
+x%
 x$
-x#
-0"
+0#
 x!
 $end
 #50000
-1"
-#100000
-0!
-0"
-0$
-0#
-#150000
-1"
-#200000
-0"
-1$
-#250000
-1"
-#300000
-0"
-0$
 1#
-#350000
-1"
-#400000
+#100000
 1!
-0"
+1'
+1&
+0#
+0%
+0$
+#150000
+1#
+#200000
+0!
+0'
+0#
+1%
+#250000
+1#
+#300000
+1'
+0&
+0#
+0%
 1$
+#350000
+1#
+#400000
+0'
+0#
+1%
 #450000
-1"
+1#
 #500000
-0"
+0#
 #550000
-1"
+1#
 #600000
-0"
+0#
 #650000
-1"
+1#
 #700000
-0"
+0#
 #750000
-1"
+1#
 #800000
-0"
+0#
 #850000
-1"
+1#
 #900000
-0"
+0#
 #950000
-1"
+1#
 #1000000
-0"
+0#
 #1050000
-1"
+1#
 #1100000
-0"
+0#
 #1150000
-1"
+1#
 #1200000
-0"
+0#
 #1250000
-1"
+1#
 #1300000
-0"
+0#
 #1350000
-1"
+1#
 #1400000
-0"
+0#
