@@ -1,0 +1,5 @@
+1. Un circuito combinacional es todo sistema digital cuyas salidas son función exclusiva del valor de sus entradas, sin que intervengan en ningún caso estados anteriores de las entradas o las salidas, por lo tanto carecen de memoria y realimentación. Existen diferentes tipos de circuitos combinacionales: lógicos, aritméticos, de gestión de datos. Sirven para implementar decodificadores, conversores de código, multiplexores, comparadores, sumadores, etc.......
+
+2. La lógica de 3 estados añade a las compuertas lógicas una nueva entrada que permite habilitarlas o deshabilitarlas dependiendo de las necesidades del circuito.
+
+3. Un codificador/decodificador permite transformar un alfabeto en otro mediante un proceso de codificación/decodificación, permite transformar código binario en grey, binario en decimal, decimal en bcd, y todas las transformaciones de alfabetos que se te ocurran.
