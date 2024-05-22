@@ -3,18 +3,16 @@ module jk(
     output reg q
 );
     
+wire [1:0] JK = {j,k};
+
 always @(posedge clk) begin
     
-    if (j==0)
-        if(k==0)
-            q=q;
-        else
-            q=0;
-    else
-        if (k==0)
-            q=1;
-        else
-            q = ~ q;
+    case (JK)
+        2'b11: q=~q;
+        2'b10: q=1;
+        2'b01: q=0;
+        default: q=q; 
+    endcase
 
 end
 
