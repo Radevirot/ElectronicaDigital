@@ -1,10 +1,9 @@
 module mux_1_bit (
-    input wire sel,
-    input wire [1:0] d,
+    input wire sel, d0, d1,
     output wire q
 );
 
-    assign q = (~sel & d[0]) + (sel & d[1]) ;
+    assign q = (~sel & d0) + (sel & d1) ;
 
 
 
