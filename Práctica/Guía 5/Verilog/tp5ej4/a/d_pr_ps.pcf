@@ -1,0 +1,5 @@
+set_io --warn-no-port q 1  #-- output
+set_io --warn-no-port clk 31  # input
+set_io --warn-no-port d 32  # input
+set_io --warn-no-port ps 33  # input
+set_io --warn-no-port pr 34  # input

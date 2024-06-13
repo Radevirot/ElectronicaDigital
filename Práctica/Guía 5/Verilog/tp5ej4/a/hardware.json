@@ -2254,9 +2254,8 @@
     },
     "SB_DFF": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "C:\\Users\\ADMINI~1\\APIO~1\\packages\\TOOLS-~2\\bin\\../share/yosys/ice40/cells_sim.v:265.1-300.10"
       },
       "ports": {
@@ -5028,9 +5027,8 @@
     },
     "SB_LUT4": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_lut": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "C:\\Users\\ADMINI~1\\APIO~1\\packages\\TOOLS-~2\\bin\\../share/yosys/ice40/cells_sim.v:177.1-225.10"
       },
       "parameter_default_values": {
@@ -9642,59 +9640,130 @@
         }
       }
     },
-    "leds": {
+    "d_pr_ps": {
       "attributes": {
-        "hdlname": "\\leds",
+        "hdlname": "\\d_pr_ps",
         "top": "00000000000000000000000000000001",
-        "src": "leds.v:9.1-19.10"
+        "src": "d_pr_ps.v:1.1-18.10"
       },
       "ports": {
-        "LED0": {
-          "direction": "output",
-          "bits": [ "1" ]
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
         },
-        "LED1": {
-          "direction": "output",
-          "bits": [ "1" ]
+        "d": {
+          "direction": "input",
+          "bits": [ 3 ]
         },
-        "LED2": {
-          "direction": "output",
-          "bits": [ "1" ]
+        "ps": {
+          "direction": "input",
+          "bits": [ 4 ]
         },
-        "LED3": {
+        "pr": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "q": {
           "direction": "output",
-          "bits": [ "1" ]
+          "bits": [ 6 ]
         }
       },
       "cells": {
+        "d_SB_LUT4_I1": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111100"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\ADMINI~1\\APIO~1\\packages\\TOOLS-~2\\bin\\../share/yosys/ice40/cells_map.v:22.34-23.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ 3 ],
+            "I2": [ 4 ],
+            "I3": [ 5 ],
+            "O": [ 7 ]
+          }
+        },
+        "q_SB_DFF_Q": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "d_pr_ps.v:8.1-16.4|C:\\Users\\ADMINI~1\\APIO~1\\packages\\TOOLS-~2\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 7 ],
+            "Q": [ 6 ]
+          }
+        }
       },
       "netnames": {
-        "LED0": {
+        "clk": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 2 ],
           "attributes": {
-            "src": "leds.v:9.25-9.29"
+            "src": "d_pr_ps.v:2.11-2.14"
           }
         },
-        "LED1": {
+        "d": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 3 ],
           "attributes": {
-            "src": "leds.v:10.25-10.29"
+            "src": "d_pr_ps.v:2.15-2.16"
           }
         },
-        "LED2": {
+        "pr": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 5 ],
           "attributes": {
-            "src": "leds.v:11.25-11.29"
+            "src": "d_pr_ps.v:2.20-2.22"
           }
         },
-        "LED3": {
+        "prpsd": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 3, 4, 5 ],
           "attributes": {
-            "src": "leds.v:12.25-12.29"
+            "src": "d_pr_ps.v:6.12-6.17"
+          }
+        },
+        "ps": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "d_pr_ps.v:2.17-2.19"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "d_pr_ps.v:3.16-3.17"
+          }
+        },
+        "q_SB_DFF_Q_D": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "d_pr_ps.v:0.0-0.0|d_pr_ps.v:10.5-14.12|C:\\Users\\ADMINI~1\\APIO~1\\packages\\TOOLS-~2\\bin\\../share/yosys/techmap.v:575.21-575.22"
           }
         }
       }
