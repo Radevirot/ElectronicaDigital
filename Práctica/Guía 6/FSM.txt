@@ -1,0 +1,5 @@
+Procedimiento para resolver un ejercicio de máquinas de estado finito:
+1. Realizar el diagrama de la máquina de estado, tener en cuenta si es de Mealy o de Moore.
+2. En base al diagrama anterior, realizar la tabla de verdad correspondiente para la entrada y los diferentes estados.
+3. Utilizando la tabla de verdad, hacer los mapas de karnaugh para los datos de entrada de los flip-flops y la salida general de la máquina.
+4. Realizar el gráfico correspondiente.
